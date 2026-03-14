@@ -1,5 +1,6 @@
 package com.MedSys.controller;
 
+import com.MedSys.dto.AppointmentRequest;
 import com.MedSys.entities.Appointment;
 import com.MedSys.service.AppointmentService;
 import org.springframework.http.HttpStatus;
@@ -36,6 +37,7 @@ public class AppointmentController {
                 LocalTime.parse(time)
         );
 
+
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Appointment booked successfully");
         response.put("status", HttpStatus.CREATED.value());
@@ -43,6 +45,11 @@ public class AppointmentController {
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
+
+//    @PostMapping("/appoint")
+//    public Appointment createAppointment(@RequestBody AppointmentRequest request) {
+//             return appo;
+//    }
 
     // GET DOCTOR APPOINTMENTS
     @GetMapping("/doctor/{id}")

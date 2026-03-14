@@ -18,4 +18,8 @@ public interface AppointmentService {
     List<Appointment> getPatientAppointments(Long patientId);
 
     Appointment cancelAppointment(Long appointmentId);
+
+    List<Appointment> findDoctorById(Long doctorId);
+
+    List<Appointment> findByPatientId(Long patientId);
 }

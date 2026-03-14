@@ -1,4 +1,4 @@
-package com.MedSys.service.serviceImpl;
+package com.MedSys.service;
 
 import com.MedSys.entities.Appointment;
 import com.MedSys.entities.Doctor;
@@ -6,7 +6,6 @@ import com.MedSys.entities.Patient;
 import com.MedSys.repo.AppointmentRepository;
 import com.MedSys.repo.DoctorRepository;
 import com.MedSys.repo.PatientRepo;
-import com.MedSys.service.AppointmentService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

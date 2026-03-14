@@ -1,4 +1,4 @@
-package com.MedSys.repository;
+package com.MedSys.repo;
 
 import com.MedSys.entities.Appointment;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,6 +1,5 @@
-package com.MedSys.repository;
+package com.MedSys.repo;
 
-import com.MedSys.dto.DoctorDto;
 import com.MedSys.entities.Doctor;
 import org.springframework.data.jpa.repository.JpaRepository;
 

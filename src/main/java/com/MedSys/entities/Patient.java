@@ -1,10 +1,15 @@
 package com.MedSys.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "patient")
 public class Patient {
+
 
 
     @Id
@@ -15,6 +20,10 @@ public class Patient {
     private Long phone;
     private Long age;
     private String gender;
+
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private List<Appointment> appointments = new ArrayList<>();
 
     public Patient(Long age, String email, String gender, Long id, String name, Long phone) {
         this.age = age;

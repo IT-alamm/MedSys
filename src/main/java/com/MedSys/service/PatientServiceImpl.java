@@ -1,9 +1,8 @@
-package com.MedSys.service.serviceImpl;
+package com.MedSys.service;
 
 import com.MedSys.dto.PatientDto;
 import com.MedSys.entities.Patient;
 import com.MedSys.repo.PatientRepo;
-import com.MedSys.service.PatientService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
