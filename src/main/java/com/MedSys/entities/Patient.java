@@ -20,10 +20,6 @@ public class Patient {
     private Long age;
     private String gender;
 
-    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonManagedReference
-    private List<Appointment> appointments = new ArrayList<>();
-
     public Patient(Long age, String email, String gender, Long id, String name, Long phone) {
         this.age = age;
         this.email = email;

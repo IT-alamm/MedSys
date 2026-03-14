@@ -15,8 +15,12 @@ public class PatientServiceImpl implements PatientService {
     private final PatientRepo patientRepo;
     private final ModelMapper modelMapper;
 
+<<<<<<< HEAD
     public PatientServiceImpl(PatientRepo patientRepo, ModelMapper
             modelMapper) {
+=======
+    public PatientServiceImpl(PatientRepo patientRepo, ModelMapper modelMapper) {
+>>>>>>> 2af4be08717313851334df482b18097c6840d274
         this.patientRepo = patientRepo;
         this.modelMapper = modelMapper;
     }
