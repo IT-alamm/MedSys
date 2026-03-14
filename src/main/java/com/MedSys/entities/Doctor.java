@@ -1,11 +1,13 @@
 package com.MedSys.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "doctors")
-@AllArgsConstructor
 public class Doctor {
 
     @Id
@@ -23,6 +25,10 @@ public class Doctor {
     private int experience;
 
     private String availabilityStatus;
+
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private List<Appointment> appointments = new ArrayList<>();
 
     public void setAvailabilityStatus(String status) {
         this.availabilityStatus = status;
@@ -96,4 +102,13 @@ public class Doctor {
     public Doctor() {
     }
 
+    public Doctor(Long id, String name, String email, String phone, String specialization, int experience, String availabilityStatus) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.specialization = specialization;
+        this.experience = experience;
+        this.availabilityStatus = availabilityStatus;
+    }
 }

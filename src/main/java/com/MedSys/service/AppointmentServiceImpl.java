@@ -3,9 +3,9 @@ package com.MedSys.service;
 import com.MedSys.entities.Appointment;
 import com.MedSys.entities.Doctor;
 import com.MedSys.entities.Patient;
+import com.MedSys.repo.PatientRepo;
 import com.MedSys.repository.AppointmentRepository;
 import com.MedSys.repository.DoctorRepository;
-import com.MedSys.repository.PatientRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -16,11 +16,11 @@ import java.util.List;
 public class AppointmentServiceImpl implements AppointmentService {
 
     private final AppointmentRepository appRepo;
-    private final PatientRepository patientRepo;
+    private final PatientRepo patientRepo;
     private final DoctorRepository doctorRepo;
 
     public AppointmentServiceImpl(AppointmentRepository appRepo,
-                                  PatientRepository patientRepo,
+                                  PatientRepo patientRepo,
                                   DoctorRepository doctorRepo) {
         this.appRepo = appRepo;
         this.patientRepo = patientRepo;

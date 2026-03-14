@@ -1,5 +1,6 @@
 package com.MedSys.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -15,11 +16,13 @@ public class Appointment {
 
     // MANY appointments → ONE patient
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
     // MANY appointments → ONE doctor
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 

@@ -1,16 +1,15 @@
 package com.MedSys.service;
 
+import com.MedSys.config.ModelMapperConfig;
 import com.MedSys.dto.DoctorDto;
 import com.MedSys.entities.Doctor;
 import com.MedSys.repository.DoctorRepository;
-import lombok.Data;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@Data
 public class DoctorServiceImpl implements DoctorService {
 
     private final DoctorRepository docRepo;
