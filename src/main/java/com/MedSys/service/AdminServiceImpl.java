@@ -1,9 +1,10 @@
-package com.MedSys.service;
+package com.MedSys.service.serviceImpl;
 
 import com.MedSys.dto.AdminDto;
 import com.MedSys.entities.Admin;
 import com.MedSys.exception.ResourceNotFoundException;
 import com.MedSys.repo.AdminRepo;
+import com.MedSys.service.AdminService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
